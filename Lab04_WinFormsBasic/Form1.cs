@@ -24,6 +24,12 @@ namespace Lab04_WinFormsBasic
             cboKhoa.Items.Add("Quản trị Kinh doanh");
             cboKhoa.Items.Add("Kế toán - Tài chính");
             cboKhoa.SelectedIndex = 0; // Chọn sẵn mục đầu tiên
+
+            // Tự động điền thông tin cá nhân
+            txtMaSV.Text = "24001296";
+            txtHoTen.Text = "Nguyễn Duy Hưng";
+            radNam.Checked = true;
+        
         }
 
         private void btnHienThi_Click(object sender, EventArgs e)
