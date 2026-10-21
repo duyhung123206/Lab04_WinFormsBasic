@@ -61,6 +61,12 @@
     <Compile Include="FormCalculator.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormDangKyHP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDangKyHP.Designer.cs">
+      <DependentUpon>FormDangKyHP.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormCalculator.resx">
       <DependentUpon>FormCalculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDangKyHP.resx">
+      <DependentUpon>FormDangKyHP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
