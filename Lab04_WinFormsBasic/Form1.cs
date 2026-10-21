@@ -45,11 +45,21 @@ namespace Lab04_WinFormsBasic
 
         private void btnHienThi_Click(object sender, EventArgs e)
         {
+            // Lấy giới tính
             string gioiTinh = radNam.Checked ? "Nam" : "Nữ";
+
+            // Lấy danh sách sở thích từ các CheckBox
+            List<string> ds = new List<string>();
+            if (chkDocSach.Checked) ds.Add("Đọc sách");
+            if (chkTheThao.Checked) ds.Add("Thể thao");
+            if (chkLapTrinh.Checked) ds.Add("Lập trình");
+            string soThich = ds.Count == 0 ? "Chưa chọn" : string.Join(", ", ds);
+
+            // Gom toàn bộ thông tin (bao gồm cả đường dẫn ảnh) vào hộp thoại thông báo
             string thongTin = string.Format(
-                "Mã: {0}\nHọ tên: {1}\nNgày sinh: {2:dd/MM/yyyy}\nKhoa: {3}\nGiới tính: {4}\nTuổi: {5}",
+                "Mã: {0}\nHọ tên: {1}\nNgày sinh: {2:dd/MM/yyyy}\nKhoa: {3}\nGiới tính: {4}\nTuổi: {5}\nSở thích: {6}\nẢnh: {7}",
                 txtMaSV.Text, txtHoTen.Text, dtpNgaySinh.Value,
-                cbokhoa.Text, gioiTinh, lblSoTuoi.Text);
+                cbokhoa.Text, gioiTinh, lblSoTuoi.Text, soThich, txtDuongDanAnh.Text);
 
             MessageBox.Show(thongTin, "Thông tin sinh viên");
         }
@@ -65,6 +75,21 @@ namespace Lab04_WinFormsBasic
         private void dtpNgaySinh_ValueChanged(object sender, EventArgs e)
         {
             lblSoTuoi.Text = TinhTuoi(dtpNgaySinh.Value).ToString();
+        }
+
+        // 7. Chọn ảnh đại diện bằng OpenFileDialog và hiển thị chế độ Zoom
+        private void btnChonAnh_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog dlg = new OpenFileDialog())
+            {
+                dlg.Filter = "Image files|*.jpg;*.jpeg;*.png;*.bmp";
+                if (dlg.ShowDialog() == DialogResult.OK)
+                {
+                    picAnh.SizeMode = PictureBoxSizeMode.Zoom;
+                    picAnh.ImageLocation = dlg.FileName;
+                    txtDuongDanAnh.Text = dlg.FileName;
+                }
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
