@@ -16,7 +16,7 @@ namespace Lab04_WinFormsBasic
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormCalculator());
+            Application.Run(new FormLogin());
         }
     }
 }
