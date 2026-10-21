@@ -31,7 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtHoTen = new System.Windows.Forms.TextBox();
             this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
-            this.cboKhoa = new System.Windows.Forms.ComboBox();
+            this.cbokhoa = new System.Windows.Forms.ComboBox();
             this.btnHienThi = new System.Windows.Forms.Button();
             this.radNam = new System.Windows.Forms.RadioButton();
             this.radNu = new System.Windows.Forms.RadioButton();
@@ -41,6 +41,8 @@
             this.lblGioiTinh = new System.Windows.Forms.Label();
             this.txtMaSV = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblTuoi = new System.Windows.Forms.Label();
+            this.lblSoTuoi = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -68,14 +70,14 @@
             this.dtpNgaySinh.TabIndex = 2;
             this.dtpNgaySinh.ValueChanged += new System.EventHandler(this.dtpNgaySinh_ValueChanged);
             // 
-            // cboKhoa
+            // cbokhoa
             // 
-            this.cboKhoa.FormattingEnabled = true;
-            this.cboKhoa.Location = new System.Drawing.Point(188, 175);
-            this.cboKhoa.Name = "cboKhoa";
-            this.cboKhoa.Size = new System.Drawing.Size(163, 24);
-            this.cboKhoa.TabIndex = 3;
-            this.cboKhoa.Text = "Công nghệ thông tin";
+            this.cbokhoa.FormattingEnabled = true;
+            this.cbokhoa.Location = new System.Drawing.Point(188, 175);
+            this.cbokhoa.Name = "cbokhoa";
+            this.cbokhoa.Size = new System.Drawing.Size(163, 24);
+            this.cbokhoa.TabIndex = 3;
+            this.cbokhoa.Text = "Công nghệ thông tin";
             // 
             // btnHienThi
             // 
@@ -161,11 +163,30 @@
             this.textBox1.Size = new System.Drawing.Size(100, 22);
             this.textBox1.TabIndex = 16;
             // 
+            // lblTuoi
+            // 
+            this.lblTuoi.AutoSize = true;
+            this.lblTuoi.Location = new System.Drawing.Point(53, 299);
+            this.lblTuoi.Name = "lblTuoi";
+            this.lblTuoi.Size = new System.Drawing.Size(34, 16);
+            this.lblTuoi.TabIndex = 17;
+            this.lblTuoi.Text = "Tuổi";
+            // 
+            // lblSoTuoi
+            // 
+            this.lblSoTuoi.Location = new System.Drawing.Point(188, 299);
+            this.lblSoTuoi.Name = "lblSoTuoi";
+            this.lblSoTuoi.Size = new System.Drawing.Size(100, 22);
+            this.lblSoTuoi.TabIndex = 19;
+            this.lblSoTuoi.Text = "20";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblSoTuoi);
+            this.Controls.Add(this.lblTuoi);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.txtMaSV);
             this.Controls.Add(this.lblGioiTinh);
@@ -175,7 +196,7 @@
             this.Controls.Add(this.radNu);
             this.Controls.Add(this.radNam);
             this.Controls.Add(this.btnHienThi);
-            this.Controls.Add(this.cboKhoa);
+            this.Controls.Add(this.cbokhoa);
             this.Controls.Add(this.dtpNgaySinh);
             this.Controls.Add(this.txtHoTen);
             this.Controls.Add(this.label1);
@@ -192,7 +213,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtHoTen;
         private System.Windows.Forms.DateTimePicker dtpNgaySinh;
-        private System.Windows.Forms.ComboBox cboKhoa;
+        private System.Windows.Forms.ComboBox cbokhoa;
         private System.Windows.Forms.Button btnHienThi;
         private System.Windows.Forms.RadioButton radNam;
         private System.Windows.Forms.RadioButton radNu;
@@ -202,6 +223,8 @@
         private System.Windows.Forms.Label lblGioiTinh;
         private System.Windows.Forms.Label txtMaSV;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label lblTuoi;
+        private System.Windows.Forms.TextBox lblSoTuoi;
     }
 }
 
