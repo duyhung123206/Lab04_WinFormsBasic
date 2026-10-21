@@ -33,14 +33,14 @@
             this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.cboKhoa = new System.Windows.Forms.ComboBox();
             this.btnHienThi = new System.Windows.Forms.Button();
-            this.txtMaSV = new System.Windows.Forms.Label();
             this.radNam = new System.Windows.Forms.RadioButton();
             this.radNu = new System.Windows.Forms.RadioButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblHoTen = new System.Windows.Forms.Label();
             this.lblNgaySinh = new System.Windows.Forms.Label();
             this.lblKhoa = new System.Windows.Forms.Label();
             this.lblGioiTinh = new System.Windows.Forms.Label();
+            this.txtMaSV = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -87,15 +87,6 @@
             this.btnHienThi.UseVisualStyleBackColor = true;
             this.btnHienThi.Click += new System.EventHandler(this.btnHienThi_Click);
             // 
-            // txtMaSV
-            // 
-            this.txtMaSV.AutoSize = true;
-            this.txtMaSV.Location = new System.Drawing.Point(47, 39);
-            this.txtMaSV.Name = "txtMaSV";
-            this.txtMaSV.Size = new System.Drawing.Size(81, 16);
-            this.txtMaSV.TabIndex = 7;
-            this.txtMaSV.Text = "Mã sinh viên";
-            // 
             // radNam
             // 
             this.radNam.AutoSize = true;
@@ -117,14 +108,6 @@
             this.radNu.TabStop = true;
             this.radNu.Text = "Nữ";
             this.radNu.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(188, 39);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 10;
-            this.textBox1.Text = "24001296";
             // 
             // lblHoTen
             // 
@@ -162,19 +145,35 @@
             this.lblGioiTinh.TabIndex = 14;
             this.lblGioiTinh.Text = "Giới tính";
             // 
+            // txtMaSV
+            // 
+            this.txtMaSV.AutoSize = true;
+            this.txtMaSV.Location = new System.Drawing.Point(47, 42);
+            this.txtMaSV.Name = "txtMaSV";
+            this.txtMaSV.Size = new System.Drawing.Size(81, 16);
+            this.txtMaSV.TabIndex = 15;
+            this.txtMaSV.Text = "Mã sinh viên";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(188, 39);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.TabIndex = 16;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtMaSV);
             this.Controls.Add(this.lblGioiTinh);
             this.Controls.Add(this.lblKhoa);
             this.Controls.Add(this.lblNgaySinh);
             this.Controls.Add(this.lblHoTen);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.radNu);
             this.Controls.Add(this.radNam);
-            this.Controls.Add(this.txtMaSV);
             this.Controls.Add(this.btnHienThi);
             this.Controls.Add(this.cboKhoa);
             this.Controls.Add(this.dtpNgaySinh);
@@ -182,6 +181,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,14 +194,14 @@
         private System.Windows.Forms.DateTimePicker dtpNgaySinh;
         private System.Windows.Forms.ComboBox cboKhoa;
         private System.Windows.Forms.Button btnHienThi;
-        private System.Windows.Forms.Label txtMaSV;
         private System.Windows.Forms.RadioButton radNam;
         private System.Windows.Forms.RadioButton radNu;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label lblHoTen;
         private System.Windows.Forms.Label lblNgaySinh;
         private System.Windows.Forms.Label lblKhoa;
         private System.Windows.Forms.Label lblGioiTinh;
+        private System.Windows.Forms.Label txtMaSV;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

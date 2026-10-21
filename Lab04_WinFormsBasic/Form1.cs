@@ -19,22 +19,29 @@ namespace Lab04_WinFormsBasic
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // Thêm sẵn dữ liệu mẫu cho ComboBox Khoa
-            cboKhoa.Items.Add("Công nghệ Thông tin");
-            cboKhoa.Items.Add("Quản trị Kinh doanh");
-            cboKhoa.Items.Add("Kế toán - Tài chính");
-            cboKhoa.SelectedIndex = 0; // Chọn sẵn mục đầu tiên
+            // 1. Nạp danh sách khoa
+            cboKhoa.Items.Clear();
+            cboKhoa.Items.Add("Công nghệ thông tin");
+            cboKhoa.Items.Add("Công nghệ kỹ thuật ô tô");
+            cboKhoa.Items.Add("Kinh tế");
 
-            // Tự động điền thông tin cá nhân
+            // 2. Cấu hình kiểu hiển thị và chọn mục đầu tiên
+            cboKhoa.DropDownStyle = ComboBoxStyle.DropDownList;
+            if (cboKhoa.Items.Count > 0)
+            {
+                cboKhoa.SelectedIndex = 0;
+            }
+
+            // 3. Đặt trạng thái mặc định cho giới tính (Nam)
+            radNam.Checked = true;
+
+            // 4. Tự động điền thông tin cá nhân
             txtMaSV.Text = "24001296";
             txtHoTen.Text = "Nguyễn Duy Hưng";
-            radNam.Checked = true;
-        
         }
 
         private void btnHienThi_Click(object sender, EventArgs e)
         {
-            // Kiểm tra radNam phải là RadioButton (nút tròn lựa chọn giới tính)
             string gioiTinh = radNam.Checked ? "Nam" : "Nữ";
             string thongTin = string.Format(
                 "Mã: {0}\nHọ tên: {1}\nNgày sinh: {2:dd/MM/yyyy}\nKhoa: {3}\nGiới tính: {4}",
@@ -44,14 +51,11 @@ namespace Lab04_WinFormsBasic
             MessageBox.Show(thongTin, "Thông tin sinh viên");
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-            // Hàm xử lý sự kiện click cho label (nếu có phát sinh từ giao diện thiết kế)
-        }
-
         private void dtpNgaySinh_ValueChanged(object sender, EventArgs e)
         {
-
+        }
+        private void label1_Click(object sender, EventArgs e)
+        {
         }
     }
 }
